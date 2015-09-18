@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  app_name: MyString
+  app_company: MyString
+  app_icon: MyString
+  app_url: MyString
+  rating: 1.5
+  price: 1.5
+  global_rating_cnt: 1
+  country_rating_cnt: 1
+  crrnt_vrsn_rating_cnt: 1
+  iphone_dwnld_cnt: 1
+  ipad_dwnld_cnt: 1
+  inapp_purchase: false
+  iphone_revenue: MyString
+  ipad_revenue: MyString
+
+two:
+  app_name: MyString
+  app_company: MyString
+  app_icon: MyString
+  app_url: MyString
+  rating: 1.5
+  price: 1.5
+  global_rating_cnt: 1
+  country_rating_cnt: 1
+  crrnt_vrsn_rating_cnt: 1
+  iphone_dwnld_cnt: 1
+  ipad_dwnld_cnt: 1
+  inapp_purchase: false
+  iphone_revenue: MyString
+  ipad_revenue: MyString
