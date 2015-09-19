@@ -16,3 +16,5 @@ class Application
   field :phr, as: :iphone_revenue, type: String
   field :pdr, as: :ipad_revenue, type: String
 end
+
+

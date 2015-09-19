@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StApps</title>
+  <title><%= yield (:title) %> | Top Charts</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+<div class="container">
+  <div class="center-block">
+    <h1>Top Charts</h1>
+
+<!-- Navigation-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Paid", top_paid_index_path %></li>
+        <li><%= link_to "Free", top_free_index_path %></li>
+        <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
+      </ul>
+    </div>
+</nav>
+
+  <%= yield %>
+</div>
+</div>
+
 
 </body>
 </html>
