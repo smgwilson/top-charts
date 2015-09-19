@@ -16,6 +16,16 @@ class Application
   field :phr, as: :iphone_revenue, type: String
   field :pdr, as: :ipad_revenue, type: String
 
+  def revenue
+    @iphone_revenue = :iphone_revenue.gsub(/[^0-9]/, '').to_i
+    @ipad_revenue = :ipad_revenue.gsub(/[^0-9]/,'').to_i
+    return @iphone_revenue + @ipad_revenue
+  end
+
+  def download_count
+    return :iphone_dwnld_cnt + :ipad_dwnld_cnt
+  end
+
 
 end
 
