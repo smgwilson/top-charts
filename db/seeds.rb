@@ -8,6 +8,7 @@
 
 require 'json'
 
+# Seed the database with cleaned JSON data
 JSON.parse(open("#{Rails.root}/db/seed.json").read).each do |stuff|
   apps = Application.new(stuff)
   apps.save!
