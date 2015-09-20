@@ -1,18 +1,20 @@
 <table>
   <tr>
+    <th>Ranking</th>
     <th>Image</th>
     <th>Name</th>
     <th>Company</th>
     <th>Price</th>
-    <th>Ratings</th>
+    <th># of Ratings</th>
   </tr>
 
-  <% @free.each do |app| %>
+  <% @free.each_with_index do |app, index| %>
       <tr>
+        <td><%=index + 1%></td>
         <td><%= image_tag app_icon(app), size:'48' %></td>
         <td><%=app.app_name %></td>
         <td><%=app.app_company %></td>
-        <td><%=app.price %></td>
+        <td><%=number_to_currency(app.price) %></td>
         <td><%=app.country_rating_cnt %></td>
       </tr>
   <% end %>
