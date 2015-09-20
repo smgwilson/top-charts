@@ -1,31 +1,29 @@
 class Application
+
   include Mongoid::Document
   include Mongoid::Timestamps
-  field :an, as: :app_name, type: String
-  field :ac, as: :app_company, type: String
-  field :ai, as: :app_icon, type: String
-  field :au, as: :app_url, type: String
+  field :an, as: :app_name
+  field :ac, as: :app_company
+  field :ai, as: :app_icon
+  field :au, as: :app_url
   field :r, as: :rating, type: Float
   field :p, as: :price, type: Float
-  field :grc, as: :global_rating_cnt, type: Integer
-  field :crc, as: :country_rating_cnt, type: Integer
-  field :cvrc, as: :crrnt_vrsn_rating_cnt, type: Integer
-  field :phdc, as: :iphone_dwnld_cnt, type: Integer
-  field :pddc, as: :ipad_dwnld_cnt, type: Integer
+  field :grc, as: :global_rating_cnt, type: Integer, default: 0
+  field :crc, as: :country_rating_cnt, type: Integer, default: 0
+  field :cvrc, as: :crrnt_vrsn_rating_cnt, type: Integer, default: 0
+  field :phdc, as: :iphone_dwnld_cnt, type: Integer, default: 0
+  field :pddc, as: :ipad_dwnld_cnt, type: Integer, default: 0
   field :ip, as: :inapp_purchase, type: Mongoid::Boolean
-  field :phr, as: :iphone_revenue, type: String
-  field :pdr, as: :ipad_revenue, type: String
-
-  def revenue
-    @iphone_revenue = :iphone_revenue.gsub(/[^0-9]/, '').to_i
-    @ipad_revenue = :ipad_revenue.gsub(/[^0-9]/,'').to_i
-    return @iphone_revenue + @ipad_revenue
-  end
-
+  field :phr, as: :iphone_revenue
+  field :pdr, as: :ipad_revenue
+  
   def download_count
-    return :iphone_dwnld_cnt + :ipad_dwnld_cnt
+    (self.pddc ||= 0) + (self.phdc ||= 0)
   end
 
+  def self.sorted_by_download_count
+    Application.all.sort_by(&:download_count).reverse
+  end
 
 end
 
