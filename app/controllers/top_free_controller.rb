@@ -1,6 +1,6 @@
 class TopFreeController < ApplicationController
   def index
-    @free = Application.where(price: 0.00..0.00).take(400)
+    @free = Application.free.sorted_by_download_count
   end
 
   def show

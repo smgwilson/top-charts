@@ -15,7 +15,6 @@ gem 'bootstrap-sass',       '3.2.0.0'
 gem 'autoprefixer-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
 # Use mongo for database
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 

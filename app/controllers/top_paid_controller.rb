@@ -1,6 +1,6 @@
 class TopPaidController < ApplicationController
   def index
-    @paid = Application.where(price: 0.01..Float::INFINITY).take(400)
+    @paid = Application.sorted_by_download_count
   end
 
   def show

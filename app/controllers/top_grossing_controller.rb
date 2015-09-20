@@ -1,6 +1,6 @@
 class TopGrossingController < ApplicationController
   def index
-    @top_gross = Application.all.take(400)
+    @top_gross = Application.sorted_by_total_revenue
   end
 
   def show

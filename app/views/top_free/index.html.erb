@@ -1,2 +1,19 @@
-<h1>TopFree#index</h1>
-<p>Find me in app/views/top_free/index.html.erb</p>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Price</th>
+    <th>Ratings</th>
+  </tr>
+
+  <% @free.each do |app| %>
+      <tr>
+        <td><%= image_tag app_icon(app), size:'48' %></td>
+        <td><%=app.app_name %></td>
+        <td><%=app.app_company %></td>
+        <td><%=app.price %></td>
+        <td><%=app.country_rating_cnt %></td>
+      </tr>
+  <% end %>
+</table>
