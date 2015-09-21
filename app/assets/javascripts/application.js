@@ -14,5 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.raty.js
 //= require_tree .
 
+
+$(document).ready(function() {
+    $("#star").raty({
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/',
+        readOnly: true
+    });
+})
