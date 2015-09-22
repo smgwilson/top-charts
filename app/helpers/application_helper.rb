@@ -12,7 +12,7 @@ module ApplicationHelper
     star_array = []
     half_stars = 0
     on_stars = 0
-    
+
     if a == 0
       off_stars = max_stars
     elsif a < 1
