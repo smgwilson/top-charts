@@ -9,6 +9,7 @@
     <th class="col-sm-2">Rating </th>
   </tr>
 
+
   <% @free.each_with_index do |app, index| %>
       <tr data-href="<%= app_url(app) %>">
         <td><%=index + 1%></td>

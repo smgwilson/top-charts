@@ -17,6 +17,8 @@ gem 'autoprefixer-rails'
 # gem 'therubyracer', platforms: :ruby
 # Use mongo for database
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+# Use will_paginate for pagination
+gem 'will_paginate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
