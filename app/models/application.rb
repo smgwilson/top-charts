@@ -18,6 +18,8 @@ class Application
   field :pdr, as: :ipad_revenue
 
   scope :free, -> { where(price: 0.00..0.00) }
+  scope :paid, -> { where(price: 0.01..1000000.00)}
+
 
   def download_count
     (self.pddc ||= 0) + (self.phdc ||= 0)
