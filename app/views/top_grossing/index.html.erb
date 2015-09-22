@@ -1,21 +1,29 @@
-<table>
+<table class="table table-condensed">
   <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Company</th>
-    <th>Price</th>
-    <th>Revenue</th>
-    <th>Ratings</th>
+    <th class="col-sm-1">Ranking </th>
+    <th class="col-sm-2">Image </th>
+    <th class="col-sm-3">Name </th>
+    <th class="col-sm-2">Company </th>
+    <th class="col-sm-1">Price </th>
+    <th class="col-sm-1"># of Ratings </th>
+    <th class="col-sm-2">Rating </th>
   </tr>
 
-  <% @top_gross.each do |app| %>
+  <% @top_gross.each_with_index do |app, index| %>
       <tr>
+        <td><%=index + 1%></td>
         <td><%= image_tag app_icon(app), size:'48' %></td>
         <td><%=app.app_name %></td>
         <td><%=app.app_company %></td>
-        <td><%=app.price %></td>
-        <td><%=app.revenue_count%></td>
+        <td><%=number_to_currency(app.price) %></td>
         <td><%=app.country_rating_cnt %></td>
+        <td>
+          <%= image_tag app_ratings(0,app.rating)%>
+          <%= image_tag app_ratings(1,app.rating)%>
+          <%= image_tag app_ratings(2,app.rating)%>
+          <%= image_tag app_ratings(3,app.rating)%>
+          <%= image_tag app_ratings(4,app.rating)%>
+        </td>
       </tr>
   <% end %>
 </table>

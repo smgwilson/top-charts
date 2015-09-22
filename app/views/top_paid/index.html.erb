@@ -17,7 +17,13 @@
         <td><%=app.app_company %></td>
         <td><%=number_to_currency(app.price) %></td>
         <td><%=app.country_rating_cnt %></td>
-        <td><%=app.rating %><div id="star" data-score=<%=app.rating%>></div></td>
+        <td>
+          <%= image_tag app_ratings(0,app.rating)%>
+          <%= image_tag app_ratings(1,app.rating)%>
+          <%= image_tag app_ratings(2,app.rating)%>
+          <%= image_tag app_ratings(3,app.rating)%>
+          <%= image_tag app_ratings(4,app.rating)%>
+        </td>
       </tr>
   <% end %>
 </table>
