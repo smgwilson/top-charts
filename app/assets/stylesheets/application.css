@@ -14,4 +14,6 @@
  *= require_self
  */
 
-
+table tr:hover {
+    cursor:pointer;
+}

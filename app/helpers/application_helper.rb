@@ -7,6 +7,10 @@ module ApplicationHelper
     a.app_icon
   end
 
+  def app_url(a)
+    a.app_url
+  end
+
   def app_ratings (num, a)
     max_stars = 5
     star_array = []

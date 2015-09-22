@@ -18,6 +18,7 @@
 //= require_tree .
 
 
+/*
 $(document).ready(function() {
     $("#star").raty({
         score: function() {
@@ -27,3 +28,13 @@ $(document).ready(function() {
         readOnly: true
     });
 })
+*/
+
+//function to open external links to applications
+$(document).ready (function(){
+        $("tr").click (function(){
+                window.open($(this).attr("data-href"));
+            }
+        )
+    }
+)
