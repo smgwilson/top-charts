@@ -1,6 +1,6 @@
 class TopPaidController < ApplicationController
   def index
-    @paid = Application.sorted_by_download_count
+    @paid = Application.paid.sorted_by_download_count
   end
 
   def show
