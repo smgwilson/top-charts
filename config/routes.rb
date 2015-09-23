@@ -1,16 +1,10 @@
 Rails.application.routes.draw do
   get 'top_grossing/index'
 
-  get 'top_grossing/show'
-
   get 'top_free/index'
 
-  get 'top_free/show'
-
   get 'top_paid/index'
-
-  get 'top_paid/show'
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

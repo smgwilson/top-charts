@@ -3,6 +3,4 @@ class TopFreeController < ApplicationController
     @free = Application.free.sorted_by_download_count.paginate(:page => params[:page], :per_page => 50)
   end
 
-  def show
-  end
 end
