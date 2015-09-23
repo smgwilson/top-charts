@@ -1,3 +1,6 @@
+<%=will_paginate @top_gross %>
+<%= page_entries_info @top_gross %>
+
 <table class="table table-condensed">
   <tr>
     <th class="col-sm-1">Ranking </th>
@@ -11,7 +14,7 @@
 
   <% @top_gross.each_with_index do |app, index| %>
       <tr data-href="<%= app_url(app) %>">
-        <td><%=index + 1%></td>
+        <td><%=@top_gross.offset + index + 1 %></td>
         <td><%= image_tag app_icon(app), size:'48' %></td>
         <td><%=app.app_name %></td>
         <td><%=app.app_company %></td>
