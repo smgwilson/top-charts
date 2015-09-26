@@ -14,6 +14,38 @@
  *= require_self
  */
 
+#company {
+    font-size: small;
+}
+
+.header {
+    position: absolute;
+}
+
+#price {
+    float:left;
+    width:auto;
+    height:30px;
+    display:block;
+    border:1px solid blue;
+    color: blue;
+    line-height:30px;
+    text-align:center;
+    padding:0px 20px;
+    border-radius:3px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.row {
+    text-align: center
+}
+
 table tr:hover {
     cursor:pointer;
 }
+
+#name {
+    font-size: large;
+}
+

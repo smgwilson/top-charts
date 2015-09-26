@@ -2,32 +2,32 @@
 <%= page_entries_info @paid %>
 
 
-<table class="table table-condensed">
-  <tr>
-    <th class="col-sm-1">Ranking </th>
-    <th class="col-sm-1">Image </th>
-    <th class="col-sm-3">Name </th>
-    <th class="col-sm-3">Company </th>
-    <th class="col-sm-1">Price </th>
-    <th class="col-sm-1"># of Ratings </th>
-    <th class="col-sm-2">Rating </th>
-  </tr>
+  <table class="table table-condensed">
+    <tr>
+      <th class="col-sm-1"></th>
+      <th class="col-sm-1"></th>
+      <th class="col-sm-9"></th>
+      <th class="col-sm-1"></th>
+    </tr>
 
-  <% @paid.each_with_index do |app, index| %>
-      <tr data-href="<%= app_url(app) %>">
-        <td><%=@paid.offset + index + 1 %></td>
-        <td><%= image_tag app_icon(app), size:'48' %></td>
-        <td><%=app.app_name %></td>
-        <td><%=app.app_company %></td>
-        <td><%=number_to_currency(app.price) %></td>
-        <td><%=app.country_rating_cnt %></td>
-        <td>
-          <%= image_tag app_ratings(0,app.rating)%>
-          <%= image_tag app_ratings(1,app.rating)%>
-          <%= image_tag app_ratings(2,app.rating)%>
-          <%= image_tag app_ratings(3,app.rating)%>
-          <%= image_tag app_ratings(4,app.rating)%>
-        </td>
-      </tr>
-  <% end %>
-</table>
+    <% @paid.each_with_index do |app, index| %>
+        <tr data-href="<%= app_url(app) %>">
+          <td><%=@paid.offset + index + 1 %></td>
+          <td><%= image_tag app_icon(app), size:'48' %></td>
+          <td>
+            <div id="name"><%=app.app_name %></div>
+            <div id="company"><%=app.app_company %></div>
+            <%= image_tag app_ratings(0,app.rating)%>
+            <%= image_tag app_ratings(1,app.rating)%>
+            <%= image_tag app_ratings(2,app.rating)%>
+            <%= image_tag app_ratings(3,app.rating)%>
+            <%= image_tag app_ratings(4,app.rating)%>
+            <span id="rating"><%=app.country_rating_cnt %></span>
+          </td>
+          <td id="price"><%=number_to_currency(app.price) %></td>
+        </tr>
+    <% end %>
+  </table>
+
+
+

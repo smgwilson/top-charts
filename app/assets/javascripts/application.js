@@ -18,9 +18,10 @@
 
 //function to open external links to applications
 $(document).ready (function(){
+
         $("tr").click (function(){
                 window.open($(this).attr("data-href"));
-            }
-        )
+            });
+
     }
 )
