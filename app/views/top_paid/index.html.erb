@@ -1,6 +1,12 @@
+
+<ul class="nav nav-pills nav-justified">
+  <li class="active"><%= link_to "Paid", top_paid_index_path %></li>
+  <li><%= link_to "Free", top_free_index_path %></li>
+  <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
+</ul>
+
 <%=will_paginate @paid %>
 <%= page_entries_info @paid %>
-
 
   <table class="table table-condensed">
     <tr>

@@ -15,8 +15,12 @@
       <h1>Top Charts</h1>
     </div>
     </div>
+  </div>
       <!-- Navigation-->
-      <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100" role="navigation">
+
+    <%= render 'shared/navigation' %>
+
+<!--      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <ul class="nav nav-pills nav-justified">
             <li><%= link_to "Paid", top_paid_index_path %></li>
@@ -24,8 +28,8 @@
             <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
           </ul>
         </div>
-      </nav>
-  </div>
+      </nav>-->
+
 
 <div class="container">
   <%= yield %>
