@@ -17,7 +17,6 @@
 body {
     padding-top: 70px;
     margin: 0px;
-
 }
 
 #company {
@@ -35,11 +34,18 @@ body {
     font-size: large;
 }
 
-.nav .nav-pills .nav-justified {
-    position: fixed;
+ul.nav.nav-pills.nav-justified  {
+    border: solid blue 1px;
     top: 100px;
 }
 
+.menu {
+    position:fixed;
+    top:51px;
+    width: inherit;
+    background-color: white;
+    z-index: 10;
+}
 .navbar-header {
     margin: 0 auto;
     width: 100%;
@@ -56,7 +62,7 @@ body {
 }
 
 .page {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
