@@ -69,6 +69,9 @@ ul.nav.nav-pills.nav-justified  {
     vertical-align: middle;
 }
 
+table {
+    margin-top: 30px;
+}
 table tr:hover {
     cursor:pointer;
 }
