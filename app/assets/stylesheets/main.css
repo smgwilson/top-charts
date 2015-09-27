@@ -2,30 +2,25 @@
 Main content styling
 */
 
+/*
+Elements
+*/
+
 body {
     padding-top: 70px;
     margin: 30px;
 }
 
-#company {
-    font-size: small;
+table {
+    margin-top: 30px;
+}
+table tr:hover {
+    cursor:pointer;
 }
 
-#index {
-    vertical-align: middle;
-}
-
-#image {
-    padding-top: 15px;
-}
-#name {
-    font-size: large;
-}
-
-ul.nav.nav-pills.nav-justified  {
-    border: solid blue 1px;
-    top: 100px;
-}
+/*
+Classes
+*/
 
 .menu {
     position:fixed;
@@ -54,6 +49,30 @@ ul.nav.nav-pills.nav-justified  {
     margin-bottom: 20px;
 }
 
+ul.nav.nav-pills.nav-justified  {
+    border: solid blue 1px;
+    top: 100px;
+}
+
+/*
+IDs
+*/
+
+#company {
+    font-size: small;
+}
+#image {
+    padding-top: 15px;
+}
+
+#index {
+    vertical-align: middle;
+}
+
+#name {
+    font-size: large;
+}
+
 #price {
     float:left;
     height:30px;
@@ -67,13 +86,6 @@ ul.nav.nav-pills.nav-justified  {
     margin-top: 30px;
     font-weight: 500;
     vertical-align: middle;
-}
-
-table {
-    margin-top: 30px;
-}
-table tr:hover {
-    cursor:pointer;
 }
 
 

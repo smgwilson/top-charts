@@ -1,3 +1,4 @@
+<!--Provide custom title for this view-->
 <% provide(:title, "Paid Apps") %>
 
 <div class="menu">
@@ -8,5 +9,6 @@
   </ul>
 </div>
 
+<!--Pass a local variable to the partial-->
 <%= render 'shared/content', :type => @paid %>
 

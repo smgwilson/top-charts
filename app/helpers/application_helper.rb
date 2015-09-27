@@ -1,13 +1,16 @@
 module ApplicationHelper
 
+  # returns hyperlink to the app icon
   def app_icon(a)
     a.app_icon
   end
 
+  # returns hyperlink to the app URL
   def app_url(a)
     a.app_url
   end
 
+  # converts star ratings to star images
   def app_ratings (num, a)
     max_stars = 5
     star_array = []

@@ -22,6 +22,7 @@
 en:
   hello: "Hello world"
 
+# customize the will_paginate output a little
   will_paginate:
     page_entries_info:
       single_page:

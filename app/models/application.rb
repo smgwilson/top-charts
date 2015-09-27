@@ -1,5 +1,7 @@
 class Application
 
+  # Mongo fields are aliased so long field names aren't repeated in the DB
+
   include Mongoid::Document
   include Mongoid::Timestamps
   field :an, as: :app_name
@@ -18,12 +20,14 @@ class Application
   field :pdr, as: :ipad_revenue
 
   scope :free, -> { where(price: 0.00..0.00) }
-  scope :paid, -> { where(price: 0.01..1000000.00)}
+  scope :paid, -> { where(price: 0.01..1000000.00)}  #Hack
 
+  # Defaults download_count to zero if it's nil
   def download_count
     (self.pddc ||= 0) + (self.phdc ||= 0)
   end
 
+  # strips but digits from revenue types and adds them together
   def revenue_count
     ph_revenue = self.phr.gsub(/[^0-9]/, '').to_i
     pd_revenue = self.pdr.gsub(/[^0-9]/, '').to_i
