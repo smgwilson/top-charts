@@ -1,9 +1,12 @@
+<% provide(:title, "Free Apps") %>
 
-<ul class="nav nav-pills nav-justified">
-  <li><%= link_to "Paid", top_paid_index_path %></li>
-  <li class="active"><%= link_to "Free", top_free_index_path %></li>
-  <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
-</ul>
+<div class="menu">
+  <ul class="nav nav-pills nav-justified">
+    <li><%= link_to "Paid", top_paid_index_path %></li>
+    <li class="active"><%= link_to "Free", top_free_index_path %></li>
+    <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
+  </ul>
+</div>
 
 <%=will_paginate @free, :class => "page" %>
 

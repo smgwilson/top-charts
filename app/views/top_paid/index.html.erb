@@ -1,9 +1,12 @@
+<% provide(:title, "Paid Apps") %>
 
-<ul class="nav nav-pills nav-justified">
-  <li class="active"><%= link_to "Paid", top_paid_index_path %></li>
-  <li><%= link_to "Free", top_free_index_path %></li>
-  <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
-</ul>
+<div class="menu">
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><%= link_to "Paid", top_paid_index_path %></li>
+    <li><%= link_to "Free", top_free_index_path %></li>
+    <li><%= link_to "Top Grossing", top_grossing_index_path %></li>
+  </ul>
+</div>
 
 <%=will_paginate @paid, :class => "page" %>
 
@@ -12,14 +15,15 @@
     <tr>
       <th class="col-sm-1"></th>
       <th class="col-sm-1"></th>
-      <th class="col-sm-9"></th>
+      <th class="col-sm-8"></th>
+      <th class="col-sm-1"></th>
       <th class="col-sm-1"></th>
     </tr>
 
     <% @paid.each_with_index do |app, index| %>
         <tr data-href="<%= app_url(app) %>">
-          <td><%=@paid.offset + index + 1 %></td>
-          <td><%= image_tag app_icon(app), size:'48' %></td>
+          <td id="index"><%=@paid.offset + index + 1 %></td>
+          <td id="image"><%= image_tag app_icon(app), size:'48' %></td>
           <td>
             <div id="name"><%=app.app_name %></div>
             <div id="company"><%=app.app_company %></div>
@@ -31,6 +35,7 @@
             <span id="rating"><%=app.country_rating_cnt %></span>
           </td>
           <td id="price"><%=number_to_currency(app.price) %></td>
+          <td></td>
         </tr>
     <% end %>
   </table>
