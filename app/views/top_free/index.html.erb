@@ -1,4 +1,5 @@
 <% provide(:title, "Free Apps") %>
+<% provide(:type, @free) %>
 
 <div class="menu">
   <ul class="nav nav-pills nav-justified">
@@ -8,39 +9,4 @@
   </ul>
 </div>
 
-<table class="table">
-  <tr>
-    <th class="col-sm-1"></th>
-    <th class="col-sm-1"></th>
-    <th class="col-sm-8"></th>
-    <th class="col-sm-1"></th>
-    <th class="col-sm-1"></th>
-  </tr>
-
-  <% @free.each_with_index do |app, index| %>
-      <tr data-href="<%= app_url(app) %>">
-        <td id="index"><%=@free.offset + index + 1 %></td>
-        <td id="image"><%= image_tag app_icon(app), size:'48' %></td>
-        <td>
-          <div id="name"><%=app.app_name %></div>
-          <div id="company"><%=app.app_company %></div>
-          <%= image_tag app_ratings(0,app.rating)%>
-          <%= image_tag app_ratings(1,app.rating)%>
-          <%= image_tag app_ratings(2,app.rating)%>
-          <%= image_tag app_ratings(3,app.rating)%>
-          <%= image_tag app_ratings(4,app.rating)%>
-          <span id="rating"><%=app.country_rating_cnt %></span>
-        </td>
-        <td id="price"><%=number_to_currency(app.price) %></td>
-        <td></td>
-      </tr>
-  <% end %>
-</table>
-
-<div class="page_info">
-  <%=will_paginate @free, :class => "page" %>
-  <%= page_entries_info @free %>
-</div>
-
-
-
+<%= render 'shared/content', :type => @free %>
