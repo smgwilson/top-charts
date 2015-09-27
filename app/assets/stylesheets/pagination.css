@@ -30,9 +30,9 @@
     border-color: #000033;
 }
 .page_info {
-    width: 22em;
+    width: 30em;
     margin-bottom: 0.3em;
-    text-align: left;
+    text-align: center;
 }
 .page_info b {
     color: white;

@@ -8,9 +8,6 @@
   </ul>
 </div>
 
-<%=will_paginate @free, :class => "page" %>
-
-
 <table class="table">
   <tr>
     <th class="col-sm-1"></th>
@@ -41,6 +38,7 @@
 </table>
 
 <div class="page_info">
+  <%=will_paginate @free, :class => "page" %>
   <%= page_entries_info @free %>
 </div>
 

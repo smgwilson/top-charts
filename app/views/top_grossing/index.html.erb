@@ -8,8 +8,6 @@
   </ul>
 </div>
 
-<%=will_paginate @top_gross, :class => "page"  %>
-
 <table class="table">
   <tr>
     <th class="col-sm-1"></th>
@@ -40,6 +38,7 @@
 </table>
 
 <div class="page_info">
+  <%=will_paginate @top_gross, :class => "page"  %>
   <%=page_entries_info @top_gross %>
 </div>
 
