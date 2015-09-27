@@ -14,38 +14,63 @@
  *= require_self
  */
 
+body {
+    padding-top: 70px;
+    margin: 0px;
+
+}
+
 #company {
     font-size: small;
 }
 
-.header {
-    position: absolute;
+#name {
+    font-size: large;
+}
+
+.nav .nav-pills .nav-justified {
+    position: fixed;
+    top: 100px;
+}
+
+.navbar-header {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-header > .navbar-brand {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.page {
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 #price {
     float:left;
-    width:auto;
     height:30px;
     display:block;
     border:1px solid blue;
     color: blue;
     line-height:30px;
     text-align:center;
-    padding:0px 20px;
+    padding:0px 15px;
     border-radius:3px;
     margin-top: 30px;
     font-weight: 500;
-}
-
-.row {
-    text-align: center
 }
 
 table tr:hover {
     cursor:pointer;
 }
 
-#name {
-    font-size: large;
-}
+
+
 

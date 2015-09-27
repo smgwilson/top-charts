@@ -5,10 +5,9 @@
   <li class="active"><%= link_to "Top Grossing", top_grossing_index_path %></li>
 </ul>
 
-<%=will_paginate @top_gross %>
-<%= page_entries_info @top_gross %>
+<%=will_paginate @top_gross, :class => "page"  %>
 
-<table class="table table-condensed">
+<table class="table">
   <tr>
     <th class="col-sm-1"></th>
     <th class="col-sm-1"></th>
@@ -34,3 +33,5 @@
       </tr>
   <% end %>
 </table>
+
+<%= page_entries_info @top_gross, :class => "page-info" %>

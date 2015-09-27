@@ -1,5 +1,5 @@
 module ApplicationHelper
- 
+
   def app_icon(a)
     a.app_icon
   end
