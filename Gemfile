@@ -16,7 +16,7 @@ gem 'autoprefixer-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # Use mongo for database
-gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+gem 'mongoid', '~> 4.0.2'
 # Strongly recommended to install bson_ext for performance
 gem 'bson_ext'
 # Use will_paginate for pagination
