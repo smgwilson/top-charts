@@ -1,5 +1,7 @@
 == README
 
+=begin rdoc
+
 =PURPOSE:
 This project is an approximation of the Apple App Store “Top Charts” page found on the iphone’s App Store.
 It has a navigation menu and 3 views that list the top 400 apps in sets of 50 per page.
@@ -61,3 +63,4 @@ Each application includes
   listing on the page is partially obscured
 * The navigation menu is not DRY and is currently being repeated in each view to set each navigation pill to an active state.
 
+=end
