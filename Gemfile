@@ -17,6 +17,8 @@ gem 'autoprefixer-rails'
 # gem 'therubyracer', platforms: :ruby
 # Use mongo for database
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+# Strongly recommended to install bson_ext for performance
+gem 'bson_ext'
 # Use will_paginate for pagination
 gem 'will_paginate'
 
@@ -47,5 +49,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
