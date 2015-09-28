@@ -4,9 +4,9 @@
 This project is an approximation of the Apple App Store “Top Charts” page found on the iphone’s App Store.
 It has a navigation menu and 3 views that list the top 400 apps in sets of 50 per page.
 
-(1) Paid apps - apps for which the price is greater than zero, sorted by order of download count for “today”, with the most downloaded app first
-(2) Free Apps - apps for which the price is zero, sorted by order of download count for “today”, with the most downloaded app first
-(3) Top Grossing Apps - both paid and free apps sorted by their download revenue for today
+1. Paid apps - apps for which the price is greater than zero, sorted by order of download count for “today”, with the most downloaded app first
+2. Free Apps - apps for which the price is zero, sorted by order of download count for “today”, with the most downloaded app first
+3. Top Grossing Apps - both paid and free apps sorted by their download revenue for today
 
 =FEATURES:
 Each application includes
