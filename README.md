@@ -1,4 +1,4 @@
-#PURPOSE:
+### PURPOSE:
 This project is an approximation of the Apple App Store “Top Charts” page found on the iphone’s App Store.
 It has a navigation menu and 3 views that list the top 400 apps in sets of 50 per page.
 
@@ -6,7 +6,7 @@ It has a navigation menu and 3 views that list the top 400 apps in sets of 50 pe
 2. Free Apps - apps for which the price is zero, sorted by order of download count for “today”, with the most downloaded app first
 3. Top Grossing Apps - both paid and free apps sorted by their download revenue for today
 
-# FEATURES:
+### FEATURES:
 Each application includes
 * The application name
 * The publisher or company name
@@ -17,40 +17,40 @@ Each application includes
 * The number of “in country” ratings which have already been provided for the app
 * The ranking number for the current listing selection (1 st , 2 nd , 3 rd , etc.)
 
-# TECHNOLOGY STACK:
+### TECHNOLOGY STACK:
 * MongoDB
 * Rails 4.2.0
 * Ruby 2.1.2
 * Javascript
 * Twitter Bootstrap
 
-# GEMS:
+### GEMS:
 * Mongoid
 * will_paginate
 * bootstrap-sass
 
-# SEEDING THE DATABASE:
+### SEEDING THE DATABASE:
 * This project includes a seed.json file and a rake task in seeds.rb.  Run 'rake db:seed' to populate the development
   database with a Mongo collection called 'applications'
 
-# DESIGN CONSIDERATIONS FOR PERSISTENCE:
+### DESIGN CONSIDERATIONS FOR PERSISTENCE:
 * Data was pre-cleaned before conversion to a JSON file. If using relational DB, I would have set up some data validation rules
   within the table schema itself.
 * Field names were aliased as part of best practice in MongoDB so long field names would not need to be repetitively stored
   in the DB
 
-# DESIGN CONSIDERATIONS FOR APPLICATION CODE:
+### DESIGN CONSIDERATIONS FOR APPLICATION CODE:
 * Partials were used to keep views DRY.
 * Created named scopes to chain conditions
 * Created some appliation helper methods to assist in representing the model within the views
 
-# DESIGN CONSIDERATIONS FOR STYLING:
+### DESIGN CONSIDERATIONS FOR STYLING:
 * Twitter Bootstrap was used for responsiveness
 * I used a CSS reset file in an effort to make app view consistent across browsers. In my CSS manifest, I specify
   each stylesheet in correct load order rather than loading the tree, which would have been alphabetical.
 * Due to the amount of styling solely for pagination, I isolated this to it's stylesheet.
 
-# HACKS/BUGS/DESIRED IMPROVEMENTS:
+### HACKS/BUGS/DESIRED IMPROVEMENTS:
 * There is a hack in the application model 'application.rb' to set a scope for paid apps.
   Various other methods attempted to return apps using "price greater than zero" did not work
 * There is a bug in the table syling where the line between applications breaks over the price field
