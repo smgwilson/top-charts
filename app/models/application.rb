@@ -19,8 +19,8 @@ class Application
   field :phr, as: :iphone_revenue
   field :pdr, as: :ipad_revenue
 
-  scope :free, -> { where(price: 0.00..0.00) }
-  scope :paid, -> { where(price: 0.01..1000000.00)}  #Hack
+  scope :free, -> { where(:price.lt => 0.01) }
+  scope :paid, -> { where(:price.ne => 0.00)}
 
   # Defaults download_count to zero if it's nil
   def download_count

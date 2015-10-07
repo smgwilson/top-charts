@@ -51,8 +51,6 @@ Each application includes
 * Due to the amount of styling solely for pagination, I isolated this to it's stylesheet.
 
 ### HACKS/BUGS/DESIRED IMPROVEMENTS:
-* There is a hack in the application model 'application.rb' to set a scope for paid apps.
-  Various other methods attempted to return apps using "price greater than zero" did not work
 * There is a bug in the table syling where the line between applications breaks over the price field
 * TDD was not employed for this application.  A test suite should be developed
 * While the pages are responsive, the currently menu collapses for small devices in such a way that the top
