@@ -6,7 +6,7 @@ limited to 400
 
 class TopFreeController < ApplicationController
   def index
-    @free = Application.free.sorted_by_download_count.paginate(:page => params[:page], :per_page => 50)
+    @free = App.free.sorted_by_download_count.paginate(:page => params[:page], :per_page => 50)
   end
 
 end

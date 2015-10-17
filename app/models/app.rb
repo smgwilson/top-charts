@@ -1,4 +1,4 @@
-class Application
+class App
 
   # Mongo fields are aliased so long field names aren't repeated in the DB
 
@@ -35,11 +35,11 @@ class Application
   end
 
   def self.sorted_by_download_count
-    Application.all.sort_by(&:download_count).reverse.take(400)
+    App.all.sort_by(&:download_count).reverse.take(400)
   end
 
   def self.sorted_by_total_revenue
-    Application.all.sort_by(&:revenue_count).reverse.take(400)
+    App.all.sort_by(&:revenue_count).reverse.take(400)
   end
 
 end
